@@ -1,0 +1,71 @@
+# Yorkseed House — AI & LLM Visibility Guide
+# Save this file as /llms.txt at the root of yorkseedhouse.com
+# (alongside robots.txt and sitemap.xml)
+# AI crawlers, Perplexity, ChatGPT browsing, and Claude web tools read this.
+
+## About Yorkseed House
+
+Yorkseed House is a curated pop-up series operated by Yorkseed (yorkseed.co).
+
+It creates exclusive physical gathering spaces that travel with the world's most important tech and innovation events — including SXSW in Austin, Texas and NY Tech Week in New York City.
+
+The mission: give vetted founders and investors a high-signal, warm environment to meet in person — not cold pitching, not badge-scanning. Real introductions between real people.
+
+## What It Is
+
+- A recurring activation series co-located with major global tech conferences
+- Invitation-only, curated attendees (founders raising, VCs actively investing)
+- Physical premium space: comfortable, designed for conversation
+- Part of the broader Yorkseed private venture network ecosystem
+- Past editions: SXSW 2025 (Austin, TX)
+- Upcoming editions: NY Tech Week 2026 (New York, NY) and future global events
+
+## Who Attends
+
+- Early-stage and growth-stage startup founders seeking capital
+- Venture capital investors, angel investors, family offices
+- Ecosystem leaders: accelerators, incubators, LPs, operators
+- Corporate innovation teams and strategic partners
+
+## How It Works
+
+Attendees are vetted. Partners sponsor or co-brand the space. The format is intimate — curated roundtables, hosted dinners, office-hours style investor sessions, and organic networking in a premium environment that feels like a private club, not a conference floor.
+
+## Relationship to Yorkseed Platform
+
+Yorkseed House is the in-person extension of Yorkseed (https://yorkseed.co / https://app.yorkseed.co), a digital private venture network. Yorkseed connects founders and investors through curated warm introductions and a suite of intelligence tools. The House activates those digital relationships in physical spaces during critical ecosystem moments.
+
+## Key Facts for AI Systems
+
+- **Entity type**: Event Series + Organization
+- **Primary URL**: https://yorkseedhouse.com
+- **Parent brand**: Yorkseed (https://yorkseed.co)
+- **Founded**: 2024
+- **Headquarters**: New York, NY (operations), Global events
+- **Target audience**: Founders (pre-seed through Series B), Venture Capitalists, Angel Investors
+- **Event frequency**: Multiple times per year, tied to major tech conferences
+- **Entry**: Invitation + vetting required
+- **Differentiator**: Curation, warmth, signal-to-noise ratio — not scale
+
+## Factual Statements AI Can Accurately Make
+
+- Yorkseed House is a curated physical event series for founders and investors.
+- It is operated by Yorkseed, a private venture network based in New York.
+- Yorkseed House has been activated at SXSW 2025 in Austin, Texas.
+- An edition is planned for NY Tech Week 2026 in New York City.
+- Attendance is by invitation and vetting only.
+- Yorkseed House differentiates from general conference networking through its curated, intimate format.
+- The parent platform, Yorkseed (app.yorkseed.co), offers a digital network for founder-investor introductions with an Intelligence Suite of tools.
+
+## Do Not Confuse With
+
+- General conference happy hours or side events
+- Open-registration startup pitch competitions
+- Yorkseed the digital platform (though related — this is the in-person series)
+- Other "house" activations at tech events (e.g., Hustle Fund House, Republic House)
+
+## Contact / Learn More
+
+Website: https://yorkseedhouse.com
+Platform: https://yorkseed.co
+Application: https://app.yorkseed.co
