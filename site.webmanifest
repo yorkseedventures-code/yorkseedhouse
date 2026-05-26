@@ -1,0 +1,16 @@
+{
+  "name": "Yorkseed House",
+  "short_name": "Yorkseed House",
+  "description": "Curated founder and investor pop-up house series at global tech events.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EFE4",
+  "theme_color": "#1C3A2A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

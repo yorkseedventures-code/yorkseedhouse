@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://yorkseedhouse.com/</loc>
+    <lastmod>2026-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image><image:loc>https://yorkseedhouse.com/og-yorkseedhouse-home.jpg</image:loc><image:title>Yorkseed House</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://yorkseedhouse.com/nytw2026.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image><image:loc>https://yorkseedhouse.com/og-yorkseedhouse-nytw2026.jpg</image:loc><image:title>Yorkseed House NY Tech Week 2026</image:title></image:image>
+  </url>
+  <url>
+    <loc>https://yorkseedhouse.com/sxsw2025.html</loc>
+    <lastmod>2026-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <image:image><image:loc>https://yorkseedhouse.com/og-yorkseedhouse-sxsw2025.jpg</image:loc><image:title>Yorkseed House SXSW Austin 2025</image:title></image:image>
   </url>
 </urlset>
