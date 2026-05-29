@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://yorkseedhouse.com/</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://yorkseedhouse.com/og-yorkseedhouse-home.jpg</image:loc><image:title>Yorkseed House</image:title></image:image>
+    <image:image>
+      <image:loc>https://yorkseedhouse.com/og-yorkseedhouse-home.jpg</image:loc>
+      <image:title>Yorkseed House — Curated Founder &amp; Investor Pop-Up Series</image:title>
+      <image:caption>Yorkseed House is a curated venture pop-up house series by Yorkseed for founders, investors, and ecosystem leaders at major global tech events including NY Tech Week and SXSW.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://yorkseedhouse.com/nytw2026.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-    <image:image><image:loc>https://yorkseedhouse.com/og-yorkseedhouse-nytw2026.jpg</image:loc><image:title>Yorkseed House NY Tech Week 2026</image:title></image:image>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://yorkseedhouse.com/og-yorkseedhouse-nytw2026.jpg</image:loc>
+      <image:title>Yorkseed House — NY Tech Week 2026 at BelongNYC, SoHo</image:title>
+      <image:caption>Yorkseed House returns for NY Tech Week 2026 (NYTW 2026) at BelongNYC, 218 Lafayette St, SoHo, New York. June 1–6, 2026. $10 full-week access for founders, investors, and operators.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://yorkseedhouse.com/sxsw2025.html</loc>
-    <lastmod>2026-05-26</lastmod>
+    <lastmod>2026-05-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.55</priority>
-    <image:image><image:loc>https://yorkseedhouse.com/og-yorkseedhouse-sxsw2025.jpg</image:loc><image:title>Yorkseed House SXSW Austin 2025</image:title></image:image>
+    <image:image>
+      <image:loc>https://yorkseedhouse.com/og-yorkseedhouse-sxsw2025.jpg</image:loc>
+      <image:title>Yorkseed House SXSW Austin 2025</image:title>
+      <image:caption>Yorkseed House at SXSW Austin 2025 — a curated founder and investor pop-up by Yorkseed.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://yorkseedhouse.com/llms.txt</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://yorkseedhouse.com/llms-full.txt</loc>
+    <lastmod>2026-05-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
   </url>
 </urlset>
