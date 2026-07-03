@@ -166,19 +166,120 @@ footer{background:var(--ink);padding:64px 56px;border-top:1px solid rgba(201,169
 .fc a:hover{color:var(--gold);}
 .fb2{max-width:1200px;margin:32px auto 0;padding-top:20px;border-top:1px solid rgba(201,169,110,0.08);display:flex;justify-content:space-between;font-size:0.73rem;color:rgba(255,255,255,0.2);}
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:900px){
-  nav{padding:16px 24px;}.nav-links{display:none;}
-  .hero-content{padding:0 24px 48px;}.hero-ctas{flex-direction:column;}
-  .statement{grid-template-columns:1fr;gap:40px;padding:64px 24px;}
-  .venue{grid-template-columns:1fr;}.venue-photo{height:300px;}.venue-text{padding:56px 24px;}
-  .program{padding:64px 24px;}.day-header{grid-template-columns:120px 1fr;}.day-body{padding:28px 24px;}.valois-event{margin:20px -24px -28px -24px;padding:28px 24px;}.valois-event-grid{grid-template-columns:1fr;gap:12px;}.day-meta .day-sub{max-width:110px;}
-  .tt-grid{grid-template-columns:1fr 1fr;}
-  .register{grid-template-columns:1fr;gap:40px;padding:64px 24px;}
-  footer{padding:44px 24px;}.ft{grid-template-columns:1fr 1fr;}.fb2{flex-direction:column;gap:8px;}
-  .partners{padding:52px 24px;}
-  .partners-row{gap:32px;}
-  .pl{min-width:180px;}
-  .throughout{padding:64px 24px;}.tt-grid{grid-template-columns:1fr 1fr;}
+/* ── TABLET (iPad) ── */
+@media(max-width:1024px){
+  nav{padding:18px 32px;}
+  nav.scrolled{padding:12px 32px;}
+  .hero-content{padding:0 32px 56px;}
+  .hero-meta{gap:24px;}
+  .statement{padding:72px 32px;gap:48px;}
+  .venue-text{padding:64px 40px;}
+  .program{padding:72px 32px;}
+  .day-header{grid-template-columns:140px 1fr;padding:20px 24px;}
+  .day-body{padding:28px 32px 28px 160px;}
+  .throughout{padding:72px 32px;}
+  .tt-grid{grid-template-columns:repeat(3,1fr);}
+  .register{padding:72px 32px;gap:48px;}
+  footer{padding:56px 32px;}
+  .ft{grid-template-columns:2fr 1fr 1fr;gap:32px;}
+  .valois-section-inner{padding:72px 32px;gap:56px;}
+}
+
+/* ── MOBILE ── */
+@media(max-width:768px){
+  /* NAV */
+  nav{padding:14px 20px;}
+  nav.scrolled{padding:12px 20px;}
+  .nav-logo{font-size:0.68rem;}
+  .nav-links{display:none;}
+
+  /* HERO */
+  .hero{min-height:100svh;}
+  .hero-content{padding:0 20px 44px;flex-direction:column;align-items:flex-start;}
+  .hero-eyebrow{font-size:0.6rem;gap:8px;margin-bottom:16px;}
+  .hero-eyebrow::before{width:18px;}
+  .hero-title{font-size:clamp(3.5rem,13vw,5.5rem);margin-bottom:16px;}
+  .hero-tagline{font-size:1rem;margin-bottom:8px;}
+  .hero-address{font-size:0.72rem;margin-bottom:24px;}
+  .hero-bottom{flex-direction:column;align-items:flex-start;gap:24px;}
+  .hero-meta{gap:16px;flex-wrap:wrap;}
+  .hm-l{font-size:0.55rem;}
+  .hm-v{font-size:0.82rem;}
+  .hero-ctas{flex-direction:column;width:100%;}
+  .hero-ctas .btn{text-align:center;width:100%;padding:14px 20px;}
+
+  /* TICKER */
+  .ticker-track span{padding:0 16px;font-size:0.6rem;}
+
+  /* STATEMENT */
+  .statement{grid-template-columns:1fr;gap:32px;padding:56px 20px;}
+  .statement-h{font-size:clamp(2rem,8vw,3rem);}
+  .statement-right p{font-size:0.9rem;}
+  .free-badge{font-size:0.65rem;padding:10px 16px;}
+
+  /* VENUE */
+  .venue{grid-template-columns:1fr;}
+  .venue-photo{height:260px;}
+  .venue-text{padding:44px 20px;}
+  .big-h{font-size:clamp(1.8rem,6vw,2.5rem);}
+  .venue-text p{font-size:0.88rem;}
+  .vd-text{font-size:0.8rem;}
+
+  /* PROGRAM */
+  .program{padding:56px 20px;}
+  .program-h{font-size:clamp(1.8rem,6vw,2.5rem);margin-bottom:36px;}
+  .program-note{font-size:0.88rem;}
+  .day-header{grid-template-columns:1fr;padding:18px 20px;gap:8px;}
+  .day-meta{display:flex;align-items:baseline;gap:10px;}
+  .day-date{font-size:1.1rem!important;}
+  .day-name{font-size:0.6rem!important;}
+  .day-sub{font-size:0.6rem!important;margin-top:0!important;}
+  .day-headline{font-size:0.82rem;}
+  .day-body{padding:20px 20px;display:none;}
+  .day-body.open{display:block;}
+  .event-row{grid-template-columns:1fr;gap:6px;padding:18px 0;}
+  .ev-time{font-size:0.72rem;color:var(--gold)!important;font-weight:700;}
+  .ev-name{font-size:0.95rem;}
+  .ev-desc{font-size:0.82rem;}
+  .ev-item{font-size:0.78rem;}
+  .ev-badge{font-size:0.58rem;}
+  .event-rsvp{width:100%;text-align:center;padding:12px 16px;font-size:0.65rem;}
+  .valois-event{margin:16px -20px -20px -20px;padding:24px 20px;}
+  .valois-event-grid{grid-template-columns:1fr;gap:12px;}
+
+  /* VALOIS INTRO SECTION */
+  .valois-section-inner{grid-template-columns:1fr!important;gap:40px!important;padding:56px 20px!important;}
+
+  /* THROUGHOUT */
+  .throughout{padding:56px 20px;}
+  .tt-grid{grid-template-columns:1fr;gap:2px;}
+  .tt-item{padding:28px 20px;}
+
+  /* REGISTER */
+  .register{grid-template-columns:1fr;gap:32px;padding:56px 20px;}
+  .reg-h{font-size:clamp(2.5rem,9vw,3.5rem);}
+  .reg-desc{font-size:0.88rem;}
+  .reg-card{padding:28px 20px;}
+  .rdv{font-size:0.88rem;}
+  .register .btn{width:100%;text-align:center;padding:14px 20px;}
+
+  /* PARTNERS */
+  .partners{padding:48px 20px;}
+  .partners-row{gap:28px;flex-direction:column;align-items:center;}
+  .pl img{height:44px;}
+
+  /* FOOTER */
+  footer{padding:44px 20px;}
+  .ft{grid-template-columns:1fr;gap:32px;}
+  .fb2{flex-direction:column;gap:6px;font-size:0.68rem;}
+  .fc h5{margin-top:0;}
+}
+
+/* ── SMALL MOBILE ── */
+@media(max-width:375px){
+  .hero-title{font-size:3rem;}
+  .statement-h{font-size:1.9rem;}
+  .day-headline{font-size:0.75rem;}
 }
 
 .event-rsvp{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding:11px 20px;background:var(--gold);color:var(--ink)!important;text-decoration:none;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;border:1px solid var(--gold);transition:all .3s;min-width:150px;}
@@ -447,11 +548,21 @@ html, body{max-width:100%;overflow-x:hidden;}
   .valois-btn{padding:12px 18px !important;font-size:0.68rem !important;}
 }
 
+
+@media(max-width:768px){
+  #hamburger{display:flex!important;}
+  nav.scrolled #hamburger span{background:var(--black)!important;}
+}
 </style>
 </head>
 <body>
 <nav id="mainNav">
 <a class="nav-logo" href="https://yorkseedhouse.com">Yorkseed House</a>
+  <button id="hamburger" onclick="openMobileNav()" style="display:none;background:none;border:none;cursor:pointer;padding:4px;flex-direction:column;gap:5px;align-items:center;justify-content:center;">
+    <span style="display:block;width:22px;height:1.5px;background:var(--ivory);transition:background 0.3s;"></span>
+    <span style="display:block;width:22px;height:1.5px;background:var(--ivory);"></span>
+    <span style="display:block;width:22px;height:1.5px;background:var(--ivory);"></span>
+  </button>
 <div class="nav-links">
 <a onclick="document.getElementById('venue').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">The Space</a>
 <a onclick="document.getElementById('program').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">Program</a>
@@ -537,8 +648,8 @@ html, body{max-width:100%;overflow-x:hidden;}
 <!-- MONDAY -->
 <div class="day-block">
 <div class="day-header featured" onclick="toggleDay(this)">
-<div class="day-meta"><div class="day-name">Monday</div><div class="day-date">July 6</div><div class="day-sub">9:00 AM – 8:00 PM</div></div>
-<div><div class="day-headline">House Opens · Opening Reception &amp; Pitch Roulette</div></div>
+<div class="day-meta"><div class="day-name">Monday</div><div class="day-date">July 6</div><div class="day-sub">9:00 AM – 8:30 PM</div></div>
+<div><div class="day-headline">House Opens · OBWB Sessions · Opening Reception &amp; Pitch Roulette</div></div>
 </div>
 <div class="day-body open">
 <div class="event-row">
@@ -550,17 +661,43 @@ html, body{max-width:100%;overflow-x:hidden;}
 </div>
 </div>
 <div class="event-row">
-<div class="ev-time">5:00 PM<br/>8:00 PM</div>
+<div class="ev-time">TBD</div>
+<div>
+<div class="ev-name">IP Office Hours for Startups &amp; Scaleups</div>
+<div class="ev-desc">One-on-one and small group office hours with IP attorneys from OBWB for early-stage and growth-stage founders navigating IP strategy, patent protection, and legal foundations.</div>
+<a class="event-rsvp" href="https://luma.com/s1f21ho7" rel="noopener" target="_blank">Register →</a>
+<span class="ev-badge approval">Separate Registration Required</span>
+</div>
+</div>
+<div class="event-row">
+<div class="ev-time">TBD</div>
+<div>
+<div class="ev-name">Business Scaling Office Hours with Malin Nordby</div>
+<div class="ev-desc">Hosted by Malin Nordby (OBWB). Office hours for founders navigating international expansion, cross-border legal strategy, and scaling across markets.</div>
+<a class="event-rsvp" href="https://luma.com/4ybfb9q4" rel="noopener" target="_blank">Register →</a>
+<span class="ev-badge approval">Separate Registration Required</span>
+</div>
+</div>
+<div class="event-row">
+<div class="ev-time">TBD</div>
+<div>
+<div class="ev-name">The Intellectual Property Angle on AI</div>
+<div class="ev-desc">Hosted by OBWB. The IP implications of building with AI — patents, model ownership, training data rights, and IP strategy for AI-native companies.</div>
+<a class="event-rsvp" href="https://luma.com/483bgz6i" rel="noopener" target="_blank">Register →</a>
+<span class="ev-badge approval">Separate Registration Required</span>
+</div>
+</div>
+<div class="event-row">
+<div class="ev-time">6:00 PM<br/>8:30 PM</div>
 <div>
 <div class="ev-name">Opening Reception &amp; Pitch Roulette</div>
 <div class="ev-desc">Kick off RAISE Summit Week with Yorkseed's signature opening reception — intentional networking before the conference begins.</div><a class="event-rsvp" href="https://luma.com/e1qd2zbe" rel="noopener" target="_blank">RSVP →</a><div class="event-note">Separate registration required.</div>
 <div class="ev-items">
-<div class="ev-item">5:00 PM — Doors open · Happy hour · Networking</div>
-<div class="ev-item">5:45 PM — Welcome to Yorkseed House</div>
-<div class="ev-item">6:00 PM — Meet Match Introductions</div>
-<div class="ev-item">6:30 PM — Pitch Roulette: 2 minutes per founder</div>
-<div class="ev-item">7:15 PM — Open networking · Founder &amp; investor conversations</div>
-<div class="ev-item">8:00 PM — Reception concludes</div>
+<div class="ev-item">6:00 PM — Doors open · Drinks &amp; bites · Networking</div>
+<div class="ev-item">6:30 PM — Welcome to Yorkseed House · Meet Match Introductions</div>
+<div class="ev-item">7:00 PM — Pitch Roulette Round 1: 2 minutes per founder</div>
+<div class="ev-item">7:30 PM — Pitch Roulette Round 2 · Open networking</div>
+<div class="ev-item">8:30 PM — Reception concludes</div>
 </div>
 </div>
 </div>
@@ -570,7 +707,7 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div class="day-block">
 <div class="day-header" onclick="toggleDay(this)">
 <div class="day-meta"><div class="day-name">Tuesday</div><div class="day-date">July 7</div><div class="day-sub">9:00 AM – 6:00 PM</div></div>
-<div><div class="day-headline">Open House · Founder Office Hours · OBWB Legal &amp; IP Hours</div></div>
+<div><div class="day-headline">Open House · Founder Office Hours · OBWB Sessions · IP Across Borders</div></div>
 </div>
 <div class="day-body">
 <div class="event-row">
@@ -578,6 +715,7 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div>
 <div class="ev-name">Open House</div>
 <div class="ev-desc">Yorkseed House remains open for meetings, coworking, and introductions. Hold investor meetings, meet customers and partners, work between sessions, connect with the Yorkseed community.</div>
+<a class="event-rsvp" href="https://luma.com/ookhirfj" rel="noopener" target="_blank">Register for House Access →</a>
 </div>
 </div>
 <div class="event-row">
@@ -585,6 +723,7 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div>
 <div class="ev-name">Founder Office Hours</div>
 <div class="ev-desc">Practical conversations to help founders solve real business challenges.</div>
+<a class="event-rsvp" href="https://luma.com/ookhirfj" rel="noopener" target="_blank">Register for House Access →</a>
 <div class="ev-items">
 <div class="ev-item">Fundraising Strategy · Pitch Feedback · Product &amp; AI</div>
 <div class="ev-item">Go-to-Market · Hiring &amp; Team Building</div>
@@ -597,12 +736,22 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div>
 <div class="ev-name">OBWB Legal &amp; IP Office Hours</div>
 <div class="ev-desc">Hosted with legal professionals from OBWB. Small group discussions. Approval required.</div>
+<a class="event-rsvp" href="https://luma.com/ookhirfj" rel="noopener" target="_blank">Register for House Access →</a>
 <div class="ev-items">
 <div class="ev-item">IP Strategy · Patents · Trademarks · AI &amp; IP</div>
 <div class="ev-item">Startup Legal · Company Formation · International Expansion</div>
 <div class="ev-item">Licensing &amp; Commercial Agreements</div>
 </div>
 <span class="ev-badge approval">Approval Required</span>
+</div>
+</div>
+<div class="event-row">
+<div class="ev-time">TBD</div>
+<div>
+<div class="ev-name">IP Across Borders Office Hours</div>
+<div class="ev-desc">Hosted by OBWB. Cross-border IP strategy — protecting innovations across jurisdictions, international patent filings, and global trademark strategy.</div>
+<a class="event-rsvp" href="https://luma.com/03rjqw0s" rel="noopener" target="_blank">Register →</a>
+<span class="ev-badge approval">Separate Registration Required</span>
 </div>
 </div>
 </div>
@@ -619,24 +768,26 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div>
 <div class="ev-name">Open House</div>
 <div class="ev-desc">Continue using Yorkseed House as your headquarters between RAISE Summit sessions.</div>
+<a class="event-rsvp" href="https://luma.com/ookhirfj" rel="noopener" target="_blank">Register for House Access →</a>
 </div>
 </div>
 <div class="event-row">
 <div class="ev-time">6:00 PM<br/>9:00 PM</div>
 <div>
 <div class="ev-name">The Executive Rendez-Vous</div>
-<div class="ev-desc">A curated evening bringing together C-suite executives and founders to celebrate the global innovation community in Paris during VivaTech and RAISE Summit. Hosted by Rendez-Vous Partners, Stephanie Brooks, Jessica Sophia Wong, and Yorkseed Global Venture Network at Atelier 48, a 15-minute walk from RAISE Summit.</div>
-<a class="event-rsvp" href="https://luma.com/aouab0c7" rel="noopener" target="_blank">Request to Join →</a><div class="event-note">Separate registration required. Approval required.</div>
+<div class="ev-desc">A curated evening celebrating the global innovation community during RAISE Summit. Co-hosted by <strong>Rendez-Vous Partners</strong> and <strong>Yorkseed</strong> at <strong>Atelier 48, 48 Rue Greneta, Paris 75002</strong> — 15-minute walk from RAISE Summit. Featuring an exclusive art exhibition by American artist <strong>Rebekah MacKay</strong>.</div>
+<a class="event-rsvp" href="https://luma.com/aouab0c7" rel="noopener" target="_blank">Request to Join →</a>
+<div class="event-note">Approval required · Co-hosted by Stephanie Brooks (Rendez-Vous Partners) &amp; Jessica Sophia Wong (Yorkseed)</div>
 <div class="ev-items">
-<div class="ev-item">Venue: Atelier 48</div>
-<div class="ev-item">Featuring original works by American artist Rebekah MacKay</div>
+<div class="ev-item">Atelier 48 · 48 Rue Greneta, Paris 75002</div>
+<div class="ev-item">Art exhibition by Rebekah MacKay · C-suite executives · Founders · Investors</div>
 </div>
 <span class="ev-badge approval">Approval Required</span>
 </div>
 </div>
 <div class="valois-event">
 <div class="valois-event-grid">
-<div style="font-size:0.78rem;font-weight:600;color:#D4BC82;padding-top:4px;line-height:1.5;">7:00 PM<br/>10:00 PM</div>
+<div style="font-size:0.78rem;font-weight:600;color:#D4BC82;padding-top:4px;line-height:1.5;">5:00 PM<br/>8:00 PM</div>
 <div>
 <div style="font-size:0.6rem;font-weight:700;letter-spacing:0.28em;text-transform:uppercase;color:#D4BC82;margin-bottom:12px;">Yorkseed · Private Circle</div>
 <div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#F8F4EE;margin-bottom:6px;line-height:1;">Valois <em style="font-style:italic;color:#D4BC82;">at the Louvre</em></div>
@@ -649,7 +800,8 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div style="font-size:0.78rem;color:rgba(248,244,238,0.4);"><span style="color:#D4BC82;margin-right:8px;">·</span>Wine, champagne, and light refreshments served</div>
 </div>
 <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-<span style="display:inline-block;padding:5px 16px;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#D4BC82;border:1px solid rgba(212,188,130,0.3);">By Invitation Only</span>
+<a href="https://luma.com/3fdeb5wi" target="_blank" style="display:inline-block;padding:10px 24px;background:#D4BC82;color:#1B1810;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;text-decoration:none;">Request to Join →</a>
+<span style="display:inline-block;padding:5px 16px;font-size:0.6rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#D4BC82;border:1px solid rgba(212,188,130,0.3);">By Invitation or Approval Only</span>
 <a href="https://thevalois.com" style="font-size:0.72rem;font-weight:600;color:#D4BC82;text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;border-bottom:1px solid rgba(212,188,130,0.4);padding-bottom:1px;" target="_blank">thevalois.com →</a>
 </div>
 </div>
@@ -665,10 +817,10 @@ html, body{max-width:100%;overflow-x:hidden;}
 </div>
 <div class="day-body">
 <div class="event-row">
-<div class="ev-time">9:00 AM<br/>11:00 AM</div>
+<div class="ev-time">9:00 AM<br/>11:30 AM</div>
 <div>
 <div class="ev-name">AI Founders &amp; Investors Breakfast Roundtable</div>
-<div class="ev-desc">A curated breakfast bringing together AI founders with meaningful traction and investors actively deploying capital. Priority given to founders with recurring users, enterprise customers, or demonstrated product-market fit. Capacity intentionally limited.</div>
+<div class="ev-desc">A focused roundtable breakfast bringing together AI founders with meaningful traction and investors actively deploying capital. Designed for meaningful discussions — not pitches. Intentionally limited to encourage deeper dialogue. Curated breakfast included.</div>
 <a class="event-rsvp" href="https://luma.com/5hcr506q" rel="noopener" target="_blank">RSVP →</a><div class="event-note">Separate registration required. Approval required.</div>
 <div class="ev-items">
 <div class="ev-item">Building category-defining AI companies · Product-Market Fit</div>
@@ -682,8 +834,9 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div class="ev-time">12:30 PM<br/>2:30 PM</div>
 <div>
 <div class="ev-name">The Capital Table Lunch</div>
-<div class="ev-desc">An intimate founder and investor lunch at a restaurant within walking distance of the Louvre and RAISE Summit. Designed for conversations beyond the conference floor — where meaningful relationships develop over a shared meal. Lunch and light refreshments included.</div>
-<a class="event-rsvp" href="https://luma.com/192nk0qx" rel="noopener" target="_blank">RSVP →</a><div class="event-note">Separate registration required.</div>
+<div class="ev-desc">Yorkseed's signature curated lunch series — a carefully selected group of founders, investors, and ecosystem leaders for meaningful conversations at a private dining room in central Paris. Curated lunch included. Cross-border conversations: Europe, North America, MENA, Asia.</div>
+<a class="event-rsvp" href="https://luma.com/192nk0qx" rel="noopener" target="_blank">Get Tickets →</a>
+<div class="event-note">€45 Early Bird · €60 Regular · By invitation or approval only.</div>
 <div class="ev-items">
 <div class="ev-item">Founders: Seed to Series B · Venture-backed · Demonstrated traction</div>
 <div class="ev-item">Investors: Angels · VCs · CVCs · Family Offices · Fund Managers · LPs</div>
@@ -696,6 +849,7 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div>
 <div class="ev-name">Open House</div>
 <div class="ev-desc">Meetings, introductions, coworking, and conversations throughout the afternoon.</div>
+<a class="event-rsvp" href="https://luma.com/ookhirfj" rel="noopener" target="_blank">Register for House Access →</a>
 </div>
 </div>
 </div>
@@ -704,7 +858,7 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div class="day-block">
 <div class="day-header" onclick="toggleDay(this)">
 <div class="day-meta"><div class="day-name">Friday</div><div class="day-date">July 10</div><div class="day-sub">9:00 AM – 6:00 PM</div></div>
-<div><div class="day-headline">Community Day</div></div>
+<div><div class="day-headline">Community Day · Doing AI Business in MENA</div></div>
 </div>
 <div class="day-body">
 <div class="event-row">
@@ -712,11 +866,26 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div>
 <div class="ev-name">Community Day — Final Day</div>
 <div class="ev-desc">Dedicated to strengthening relationships formed throughout the week.</div>
+<a class="event-rsvp" href="https://luma.com/ookhirfj" rel="noopener" target="_blank">Register for House Access →</a>
 <div class="ev-items">
 <div class="ev-item">Coworking · Follow-up Meetings · Investor Meetings</div>
 <div class="ev-item">Startup Showcase · Community Introductions</div>
 <div class="ev-item">Yorkseed Connect Demonstrations · Partner Sessions</div>
 <div class="ev-item">Planning Future Collaborations</div>
+</div>
+</div>
+
+<div class="event-row">
+<div class="ev-time">2:00 PM<br/>4:00 PM</div>
+<div>
+<div class="ev-name">Doing AI Business in the MENA Region</div>
+<div class="ev-desc">Free consultation and roundtable hosted by <strong>Jonathan Osha and Malin Nordby (OBWB)</strong> for founders navigating AI and IP in international markets. Topic: AI business in MENA — challenges and opportunities. Best for AI founders, investors, operators, and companies interested in Dubai, MENA markets, and cross-border expansion.</div>
+<div class="ev-items">
+<div class="ev-item">AI founders · Investors · Operators · Executives · Developers</div>
+<div class="ev-item">Dubai · MENA markets · Cross-border expansion · International IP</div>
+</div>
+<a class="event-rsvp" href="https://luma.com/nf6p70xh" rel="noopener" target="_blank">Register Free →</a>
+<div class="event-note">Free · Founders · Investors · Ecosystem Leaders · Developers</div>
 </div>
 </div>
 </div>
@@ -753,7 +922,7 @@ html, body{max-width:100%;overflow-x:hidden;}
 <div style="font-size:0.78rem;color:rgba(248,244,238,0.4);display:flex;gap:8px;"><span style="color:#D4BC82;">·</span>Institutional Investors · Corporate Venture Leaders</div>
 <div style="font-size:0.78rem;color:rgba(248,244,238,0.4);display:flex;gap:8px;"><span style="color:#D4BC82;">·</span>Wine, champagne &amp; light refreshments</div>
 </div>
-<div style="display:inline-block;padding:6px 18px;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#D4BC82;border:1px solid rgba(212,188,130,0.3);">By Invitation Only</div>
+<a href="https://luma.com/3fdeb5wi" target="_blank" style="display:inline-block;padding:8px 22px;background:#D4BC82;color:#1B1810;font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;margin-right:12px;">Request to Join →</a><div style="display:inline-block;padding:6px 18px;font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:#D4BC82;border:1px solid rgba(212,188,130,0.3);">By Invitation or Approval Only</div>
 </div>
 </div>
 </section>
@@ -813,7 +982,29 @@ html, body{max-width:100%;overflow-x:hidden;}
 </div>
 <div class="fb2"><span>© 2026 Yorkseed · yorkseedhouse.com · Paris Edition</span><span>Next: Web Summit Lisbon · November 2026</span></div>
 </footer>
+<!-- MOBILE NAV -->
+<div id="mobileNav" style="display:none;position:fixed;inset:0;z-index:200;background:var(--ink);flex-direction:column;justify-content:center;align-items:center;gap:24px;padding:40px;overflow-y:auto;">
+  <button onclick="closeMobileNav()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:var(--ivory);font-size:1.5rem;cursor:pointer;padding:8px;">✕</button>
+  <a href="#venue" onclick="closeMobileNav()" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">The Space</a>
+  <a href="#program" onclick="closeMobileNav()" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">Program</a>
+  <a href="#register" onclick="closeMobileNav()" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">Register</a>
+  <a href="https://yorkseed.co" target="_blank" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">Yorkseed</a>
+  <a href="https://obwb.com" target="_blank" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">OBWB</a>
+  <a href="https://raisesummit.com" target="_blank" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">RAISE Summit</a>
+  <a href="https://yorkseedhouse.com" target="_blank" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--ivory);text-decoration:none;">All Houses</a>
+  <a href="https://thevalois.com" target="_blank" style="font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;color:var(--gold);text-decoration:none;">Valois</a>
+  <a href="https://luma.com/ookhirfj" target="_blank" style="margin-top:12px;display:inline-block;padding:14px 40px;background:var(--gold);color:var(--ink);font-size:0.78rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;">RSVP — Free</a>
+</div>
+
 <script>
+function openMobileNav(){document.getElementById('mobileNav').style.display='flex';}
+function closeMobileNav(){document.getElementById('mobileNav').style.display='none';}
+document.querySelectorAll('#mobileNav a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',function(){
+    var id=this.getAttribute('href').slice(1);
+    setTimeout(()=>{var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});},100);
+  });
+});
 function toggleDay(header){
   var body = header.nextElementSibling;
   body.classList.toggle('open');
