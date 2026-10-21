@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yorkseed House Lisbon | Web Summit 2026 | Nov 9–13</title>
+<meta name="description" content="Yorkseed House at Web Summit Lisbon 2026. November 9–13 at Teja House, Lisbon, Portugal. Ticket-based access to wellness, panels, lunches and the Yorkseed Founder Delegation.">
+<meta property="og:title" content="Yorkseed House Lisbon | Web Summit 2026">
+<meta property="og:description" content="November 9–13, 2026 · Teja House, Lisbon. Ticket-based access to the full week — wellness sessions, panels, curated lunches, and on-site F&B discounts.">
+<meta property="og:url" content="https://yorkseedhouse.com/websummit2026.html">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://yorkseedhouse.com/websummit2026.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  /* Lisbon | Atlantic navy + parchment + gold */
+  --ocean:#001B44;
+  --ocean-mid:#092255;
+  --tile:#1A3A80;
+  --tile-light:#2E58B8;
+  --parchment:#F2EDE3;
+  --parchment-dark:#E8E0D0;
+  --gold:#C4A06E;
+  --gold-light:#D8B888;
+  --ivory:#FAFAF5;
+  --ink:#0D0B0A;
+  --rule-dark:rgba(196,160,110,0.12);
+  --rule-light:rgba(13,11,10,0.09);
+  --rule-blue:rgba(255,255,255,0.08);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--parchment);color:var(--ink);font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .35s;border-bottom:1px solid transparent;}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:24px 56px;transition:padding .35s;}
+nav.scrolled{background:rgba(242,237,227,0.97);backdrop-filter:blur(16px);border-bottom-color:var(--rule-light);}
+nav.scrolled .nav-inner{padding-top:14px;padding-bottom:14px;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;transition:opacity .35s;}
+.nav-logo img{height:22px;width:auto;display:block;filter:brightness(0) invert(1);transition:filter .35s;}
+nav.scrolled .nav-logo img{filter:brightness(0) saturate(100%) invert(9%) sepia(51%) saturate(2500%) hue-rotate(205deg) brightness(85%) contrast(120%);}
+.nav-links{display:flex;align-items:center;gap:36px;}
+.nav-links a{font-size:0.63rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(250,250,245,0.5);text-decoration:none;transition:color .35s;}
+nav.scrolled .nav-links a{color:rgba(13,11,10,0.42);}
+.nav-links a:hover{color:var(--ivory);}
+nav.scrolled .nav-links a:hover{color:var(--ocean);}
+.nav-cta{background:var(--gold)!important;color:var(--ink)!important;padding:9px 22px;font-weight:700!important;letter-spacing:0.1em!important;opacity:1!important;transition:background .2s!important;}
+.nav-cta:hover{background:var(--gold-light)!important;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger span{width:22px;height:1.5px;background:var(--ivory);display:block;transition:background .35s;}
+nav.scrolled .hamburger span{background:var(--ocean);}
+.mobile-menu{display:none;position:fixed;top:0;left:0;right:0;z-index:150;background:var(--ocean);flex-direction:column;padding-top:62px;box-shadow:0 8px 32px rgba(0,0,0,0.3);}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:rgba(250,250,245,0.45);text-decoration:none;padding:15px 24px;border-bottom:1px solid var(--rule-blue);}
+.mobile-menu .mm-cta{background:var(--gold);color:var(--ink);margin:14px 24px 24px;padding:13px 24px;text-align:center;display:block;width:calc(100% - 48px);font-weight:700;}
+
+/* HERO */
+.hero{min-height:100svh;background:var(--ocean);display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,27,68,0.94) 0%,rgba(0,27,68,0.55) 50%,rgba(0,27,68,0.35) 100%);z-index:1;}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 20% 70%,rgba(26,58,128,0.35) 0%,transparent 65%);z-index:1;}
+.hero-inner{position:relative;z-index:2;padding:0 56px 64px;}
+.hero-eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:14px;}
+.hero-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold);flex-shrink:0;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(4.5rem,9vw,10rem);font-weight:400;line-height:0.9;color:var(--ivory);letter-spacing:-0.02em;text-shadow:0 2px 40px rgba(0,0,0,0.35);}
+.hero-title em{font-style:italic;color:rgba(250,250,245,0.38);}
+.hero-rule{height:1px;background:var(--rule-dark);margin:36px 0;}
+.hero-foot{display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.hero-meta{display:flex;gap:52px;}
+.hm-label{font-size:0.52rem;font-weight:600;letter-spacing:0.24em;text-transform:uppercase;color:rgba(250,250,245,0.28);margin-bottom:5px;}
+.hm-val{font-size:0.9rem;font-weight:300;color:rgba(250,250,245,0.65);}
+.btn{display:inline-block;text-decoration:none;font-family:'DM Sans',sans-serif;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;font-size:0.65rem;transition:all .2s;}
+.btn-gold{background:var(--gold);color:var(--ink);padding:13px 28px;}
+.btn-gold:hover{background:var(--gold-light);}
+
+/* SHARED */
+.section-eyebrow{font-size:0.6rem;font-weight:600;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.6rem);font-weight:400;line-height:1.1;color:var(--ocean);margin-bottom:24px;}
+.section-body{font-size:0.95rem;line-height:1.8;color:rgba(13,11,10,0.72);max-width:520px;}
+
+/* INTRO */
+.intro{background:var(--parchment);padding:88px 56px;}
+.intro-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:5fr 4fr;gap:80px;align-items:start;}
+.intro-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule-light);border:1px solid var(--rule-light);}
+.pillar{padding:26px 22px;background:var(--parchment);}
+.pillar-num{font-size:0.5rem;font-weight:700;letter-spacing:0.3em;color:var(--tile);margin-bottom:11px;text-transform:uppercase;display:block;}
+.pillar-name{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:400;font-style:italic;color:var(--ocean);margin-bottom:6px;line-height:1.2;}
+.pillar-desc{font-size:0.77rem;color:rgba(13,11,10,0.62);line-height:1.6;}
+
+/* PROGRAM */
+.program{background:var(--parchment-dark);padding:88px 56px;}
+.program-inner{max-width:1200px;margin:0 auto;}
+.program-header{margin-bottom:48px;}
+.prog-table{border-top:1px solid var(--rule-light);}
+.event-row{display:grid;grid-template-columns:160px 1fr auto;align-items:center;gap:28px;padding:20px 0;border-bottom:1px solid var(--rule-light);}
+.ev-date{font-size:0.6rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(13,11,10,0.52);}
+.ev-name{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:400;color:var(--ocean);}
+.ev-name em{font-style:italic;color:rgba(20,46,82,0.45);}
+.ev-rsvp{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--tile);text-decoration:none;border-bottom:1px solid rgba(46,95,154,0.3);padding-bottom:1px;white-space:nowrap;transition:border-color .2s;}
+.ev-rsvp:hover{border-color:var(--tile);}
+.ev-rsvp.soon{color:rgba(13,11,10,0.22);border-color:transparent;pointer-events:none;}
+
+/* DELEGATION */
+.delegation{background:var(--ocean-mid);padding:88px 56px;}
+.delegation-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.delegation .section-eyebrow{color:var(--gold);}
+.delegation .section-title{color:var(--ivory);}
+
+.delegation .section-body{color:rgba(250,250,245,0.72);max-width:none;}
+.del-items{margin-top:8px;}
+.del-item{padding:18px 0;border-bottom:1px solid var(--rule-blue);}
+.del-item:first-child{border-top:1px solid var(--rule-blue);}
+.di-name{font-size:0.86rem;font-weight:500;color:rgba(250,250,245,0.9);margin-bottom:4px;}
+.di-desc{font-size:0.77rem;color:rgba(250,250,245,0.58);line-height:1.6;}
+.del-cta{margin-top:36px;}
+.del-note{font-size:0.68rem;color:rgba(250,250,245,0.48);margin-top:14px;line-height:1.6;}
+
+/* ACCESS */
+.access{background:var(--parchment);padding:88px 56px;}
+.access-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.access-options{display:flex;flex-direction:column;gap:2px;}
+.access-option{background:var(--parchment-dark);padding:22px 26px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;}
+.ao-tag{font-size:0.52rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--tile);margin-bottom:5px;}
+.ao-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:400;color:var(--ocean);margin-bottom:3px;}
+.ao-desc{font-size:0.77rem;color:rgba(13,11,10,0.62);line-height:1.5;}
+.ao-link{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ocean);text-decoration:none;border-bottom:1px solid rgba(20,46,82,0.22);padding-bottom:1px;white-space:nowrap;transition:border-color .2s;}
+.ao-link:hover{border-color:var(--ocean);}
+
+/* PARTNERS */
+.partners{background:var(--parchment-dark);padding:44px 56px;border-top:1px solid var(--rule-light);}
+.partners-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:40px;}
+.p-label{font-size:0.55rem;font-weight:600;letter-spacing:0.26em;text-transform:uppercase;color:rgba(13,11,10,0.25);}
+.p-div{width:1px;height:18px;background:var(--rule-light);}
+.p-name{font-family:'Playfair Display',serif;font-size:1.1rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(13,11,10,0.38);text-decoration:none;transition:color .2s;}
+.p-name:hover{color:var(--ocean);}
+.p-name.v{font-style:italic;font-size:1.2rem;letter-spacing:0.04em;}
+.p-logo{display:flex;align-items:center;text-decoration:none;opacity:0.45;transition:opacity .2s;}
+.p-logo:hover{opacity:0.7;}
+.p-logo img{height:18px;width:auto;display:block;filter:brightness(0);}
+
+/* FOOTER */
+footer{background:var(--ocean);color:rgba(250,250,245,0.35);padding:52px 56px 28px;}
+.ft{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:52px;padding-bottom:40px;border-bottom:1px solid var(--rule-blue);}
+.ft-logo{display:block;margin-bottom:10px;}
+.ft-logo img{height:20px;width:auto;display:block;filter:brightness(0) invert(1);opacity:0.55;}
+.ft-tag{font-size:0.72rem;line-height:1.6;color:rgba(250,250,245,0.45);max-width:240px;}
+.fc h5{font-size:0.5rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:rgba(250,250,245,0.35);margin-bottom:14px;}
+.fc a{display:block;font-size:0.74rem;color:rgba(250,250,245,0.55);text-decoration:none;margin-bottom:8px;transition:color .2s;}
+.fc a:hover{color:rgba(250,250,245,0.85);}
+.fb2{max-width:1200px;margin:22px auto 0;display:flex;justify-content:space-between;font-size:0.58rem;color:rgba(250,250,245,0.16);}
+
+/* TABLET */
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+}
+@media(max-width:1024px){
+  .nav-inner{padding-left:32px;padding-right:32px;}
+  .hero-inner,.intro,.program,.delegation,.access,.partners,footer{padding-left:32px;padding-right:32px;}
+  .intro-inner,.delegation-inner,.access-inner{grid-template-columns:1fr;gap:40px;}
+  .ft{grid-template-columns:1fr 1fr;gap:36px;}
+  .ft-brand{grid-column:1/-1;}
+}
+
+/* MOBILE */
+@media(max-width:767px){
+  .nav-inner{padding:14px 20px;}
+  .hero-inner{padding:0 20px 48px;}
+  .hero-meta{gap:28px;flex-wrap:wrap;}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:20px;}
+  .intro,.program,.delegation,.access,.partners{padding:64px 20px;}
+  footer{padding:44px 20px 24px;}
+  .section-title{font-size:clamp(1.9rem,7vw,2.6rem);}
+  .intro-pillars{grid-template-columns:1fr 1fr;}
+  .pillar{padding:18px 14px;}
+  .event-row{grid-template-columns:1fr;gap:5px;padding:15px 0;}
+  .ev-rsvp{display:none;}
+  .access-option{grid-template-columns:1fr;gap:10px;}
+  .ft{grid-template-columns:1fr 1fr;gap:28px;}
+  .ft-brand{grid-column:1/-1;}
+  .fb2{flex-direction:column;gap:4px;}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="https://yorkseedhouse.com" class="nav-logo"><img src="https://yorkseed.co/assets/home/logo.png" alt="Yorkseed House"></a>
+    <div class="nav-links">
+      <a href="#program">Program</a>
+      <a href="#delegation">Delegation</a>
+      <a href="https://thevalois.com" target="_blank">Valois</a>
+      <a href="#tickets" class="nav-cta">Get Ticket</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#program" onclick="this.closest('.mobile-menu').classList.remove('open')">Program</a>
+  <a href="#delegation" onclick="this.closest('.mobile-menu').classList.remove('open')">Delegation</a>
+  <a href="https://thevalois.com" target="_blank">Valois</a>
+  <a href="#tickets" class="mm-cta" onclick="this.closest('.mobile-menu').classList.remove('open')">Get Your Ticket</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="">
+    <source src="https://videos.pexels.com/video-files/31366744/13385203_2560_1440_50fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Web Summit · Lisbon · 2026</div>
+    <h1 class="hero-title">Lisbon<br><em>House</em></h1>
+    <div class="hero-rule"></div>
+    <div class="hero-foot">
+      <div class="hero-meta">
+        <div class="hm">
+          <div class="hm-label">Dates</div>
+          <div class="hm-val">November 9–13, 2026</div>
+        </div>
+        <div class="hm">
+          <div class="hm-label">Venue</div>
+          <div class="hm-val">Teja House, Lisbon</div>
+        </div>
+        <div class="hm">
+          <div class="hm-label">Access</div>
+          <div class="hm-val">Ticket-based</div>
+        </div>
+      </div>
+      <a href="#tickets" class="btn btn-gold">Get Your Ticket</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="about">
+  <div class="intro-inner">
+    <div>
+      <span class="section-eyebrow">Yorkseed House · Teja House, Lisbon</span>
+      <h2 class="section-title">Web Summit draws 70,000 people. We bring together the ones worth knowing.</h2>
+      <p class="section-body">Five days at Teja House, Lisbon. Your ticket covers the full Yorkseed House program — from morning wellness to evening panels — plus a special discount at the restaurant and bar on-premise throughout the week.</p>
+    </div>
+    <div>
+      <div class="intro-pillars">
+        <div class="pillar">
+          <span class="pillar-num">01</span>
+          <div class="pillar-name">Curated Access</div>
+          <div class="pillar-desc">Application-based. Every seat at the table is intentional.</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02</span>
+          <div class="pillar-name">Capital Connections</div>
+          <div class="pillar-desc">Founders and investors in the same room, no intermediaries.</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03</span>
+          <div class="pillar-name">Founder Delegation</div>
+          <div class="pillar-desc">A structured cohort for founders navigating the full week.</div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">04</span>
+          <div class="pillar-name">No Noise</div>
+          <div class="pillar-desc">Off the conference floor. Private venues. High-trust conversations.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program" id="program">
+  <div class="program-inner">
+    <div class="program-header">
+      <span class="section-eyebrow">Nov 9–13, 2026</span>
+      <h2 class="section-title">Program</h2>
+    </div>
+    <div class="prog-table">
+      <div class="event-row">
+        <span class="ev-date">Sun · Nov 9</span>
+        <span class="ev-name">Founders' Welcome Reception</span>
+        <a href="#tickets" class="ev-rsvp">RSVP →</a>
+      </div>
+      <div class="event-row">
+        <span class="ev-date">Mon · Nov 10</span>
+        <span class="ev-name">Executive Lunch <em>· Yorkseed Passport Series</em></span>
+        <a href="#tickets" class="ev-rsvp">RSVP →</a>
+      </div>
+      <div class="event-row">
+        <span class="ev-date">Tue · Nov 11</span>
+        <span class="ev-name">Capital Lunch <em>· Yorkseed Passport Series</em></span>
+        <a href="#tickets" class="ev-rsvp">RSVP →</a>
+      </div>
+      <div class="event-row">
+        <span class="ev-date">Tue · Nov 11</span>
+        <span class="ev-name">Strategy Roundtable</span>
+        <a href="#tickets" class="ev-rsvp">RSVP →</a>
+      </div>
+      <div class="event-row">
+        <span class="ev-date">Wed · Nov 12</span>
+        <span class="ev-name">Founder Showcase <em>· Delegation</em></span>
+        <a href="#tickets" class="ev-rsvp">RSVP →</a>
+      </div>
+      <div class="event-row">
+        <span class="ev-date">Wed · Nov 12</span>
+        <span class="ev-name">Closing Reception</span>
+        <a href="#tickets" class="ev-rsvp">RSVP →</a>
+      </div>
+      <div class="event-row">
+        <span class="ev-date">Thu · Nov 13</span>
+        <span class="ev-name">Post-Summit Founders' Lunch</span>
+        <span class="ev-rsvp soon">Coming Soon</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELEGATION -->
+<section class="delegation" id="delegation">
+  <div class="delegation-inner">
+    <div>
+      <span class="section-eyebrow">Founder Delegation</span>
+      <h2 class="section-title">The full week, structured around you.</h2>
+      <p class="section-body">A small paid cohort with priority access to all House programming, a virtual founder showcase, and the delegation magazine distributed across the Yorkseed network. Web Summit tickets not included.</p>
+      <div class="del-cta">
+        <a href="https://yorkseed.co/delegation/lisbon-2026/book/" target="_blank" class="btn btn-gold">Join the Delegation</a>
+        <p class="del-note">Spots are limited. Applications reviewed on a rolling basis.<br>Questions: jessica@yorkseed.co</p>
+      </div>
+    </div>
+    <div class="del-items">
+      <div class="del-item">
+        <div class="di-name">Curated Cohort</div>
+        <div class="di-desc">Small group. You'll know your fellow delegates before you land.</div>
+      </div>
+      <div class="del-item">
+        <div class="di-name">Full House Access</div>
+        <div class="di-desc">Priority seats at every Yorkseed House event across the five days.</div>
+      </div>
+      <div class="del-item">
+        <div class="di-name">Virtual Founder Showcase</div>
+        <div class="di-desc">Your company presented to the Yorkseed network ahead of the summit.</div>
+      </div>
+      <div class="del-item">
+        <div class="di-name">Delegation Magazine</div>
+        <div class="di-desc">Digital edition featuring each delegate, shared across the community.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKETS -->
+<section class="access" id="tickets">
+  <div class="access-inner">
+    <div>
+      <span class="section-eyebrow">Get Your Ticket</span>
+      <h2 class="section-title">One ticket. The full week.</h2>
+      <p class="section-body">Your Yorkseed House ticket covers the full program at Teja House — from morning wellness sessions to evening panels. Includes a special discount on food and drinks at the on-site restaurant and bar throughout the week. Delegation and Valois access available separately.</p>
+    </div>
+    <div class="access-options">
+      <div class="access-option">
+        <div>
+          <div class="ao-tag">Full Week · Teja House</div>
+          <div class="ao-name">House Ticket</div>
+          <div class="ao-desc">Access to all Yorkseed House programming — wellness sessions, panels, lunches and evening events — plus F&B discount on-site throughout the week.</div>
+        </div>
+        <a href="https://yorkseed.co" target="_blank" class="ao-link">Get Ticket →</a>
+      </div>
+      <div class="access-option">
+        <div>
+          <div class="ao-tag">Paid Program · Add-On</div>
+          <div class="ao-name">Founder Delegation</div>
+          <div class="ao-desc">The full five-day cohort with priority access, virtual showcase, and the delegation magazine.</div>
+        </div>
+        <a href="https://yorkseed.co/delegation/lisbon-2026/book/" target="_blank" class="ao-link">Join →</a>
+      </div>
+      <div class="access-option">
+        <div>
+          <div class="ao-tag">Invite Only</div>
+          <div class="ao-name">Valois Circle</div>
+          <div class="ao-desc">Yorkseed's private capital circle. Exclusive programming. Membership by introduction.</div>
+        </div>
+        <a href="https://thevalois.com" target="_blank" class="ao-link">Learn →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners">
+  <div class="partners-inner">
+    <span class="p-label">Presented by</span>
+    <div class="p-div"></div>
+    <a href="https://yorkseed.co" target="_blank" class="p-logo"><img src="https://yorkseed.co/assets/home/logo.png" alt="Yorkseed"></a>
+    <div class="p-div"></div>
+    <a href="https://thevalois.com" target="_blank" class="p-name v">Valois</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ft-brand">
+      <span class="ft-logo"><img src="https://yorkseed.co/assets/home/logo-footer.png" alt="Yorkseed House"></span>
+      <div class="ft-tag">Curated founder programming at the world's defining tech and investment gatherings.</div>
+    </div>
+    <div class="fc">
+      <h5>Lisbon 2026</h5>
+      <a href="#program">Program</a>
+      <a href="https://yorkseed.co/delegation/lisbon-2026/book/" target="_blank">Delegation ↗</a>
+      <a href="#tickets">Tickets</a>
+      <a href="https://thevalois.com" target="_blank">Valois ↗</a>
+    </div>
+    <div class="fc">
+      <h5>Navigate</h5>
+      <a href="https://yorkseedhouse.com" target="_blank">All Houses ↗</a>
+      <a href="https://list.yorkseed.co" target="_blank">The List ↗</a>
+      <a href="https://yorkseed.co" target="_blank">Yorkseed ↗</a>
+      <a href="mailto:jessica@yorkseed.co">Contact</a>
+    </div>
+  </div>
+  <div class="fb2">
+    <span>© 2026 Yorkseed</span>
+    <span>Lisbon, Portugal · Web Summit 2026</span>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+</body>
+</html>
