@@ -52,10 +52,10 @@ nav.scrolled{padding:14px 56px;background:rgba(0,27,68,0.97);backdrop-filter:blu
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
 
 /* HERO */
-.hero{height:100vh;min-height:680px;position:relative;overflow:hidden;display:flex;align-items:flex-end;}
+.hero{min-height:max(680px,100vh);position:relative;overflow:hidden;display:flex;align-items:flex-end;}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,13,42,0.98) 0%,rgba(0,13,42,0.88) 38%,rgba(0,13,42,0.45) 65%,rgba(0,27,68,0.1) 100%);z-index:1;}
-.hero-content{position:relative;z-index:2;width:100%;padding:0 56px 52px;}
+.hero-content{position:relative;z-index:2;width:100%;padding:128px 56px 52px;}
 .hero-eyebrow{display:flex;align-items:center;gap:16px;margin-bottom:28px;animation:fadeUp .6s ease both;}
 .hero-eyebrow-line{width:40px;height:1px;background:var(--gold);flex-shrink:0;}
 .hero-eyebrow-text{font-size:0.6rem;font-weight:700;letter-spacing:0.3em;text-transform:uppercase;color:var(--gold);}
@@ -203,7 +203,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 }
 @media(max-width:1024px){
   nav,nav.scrolled{padding-left:32px;padding-right:32px;}
-  .hero-content{padding:0 40px 64px;}
+  .hero-content{padding:136px 40px 64px;}
   .hero-meta{gap:32px;}
   .statement,.register{padding:80px 40px;gap:48px;}
   .delegation-section{padding:80px 40px;gap:48px;}
@@ -218,7 +218,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 @media(max-width:767px){
   nav,nav.scrolled{padding:14px 20px!important;}
   .hero{min-height:100svh;}
-  .hero-content{padding:0 20px 48px;}
+  .hero-content{padding:96px 20px 48px;}
   .hero-title{font-size:clamp(2.8rem,11vw,4.2rem);line-height:.9;margin-bottom:20px;}
   .hero-meta{gap:20px;margin-bottom:28px;}
   .hero-ctas .btn{padding:15px 24px;}
@@ -278,15 +278,13 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline preload="auto">
-    <source src="https://videos.pexels.com/video-files/27404881/12136883_2560_1440_25fps.mp4" type="video/mp4">
-  </video>
+  <img class="hero-video" src="/lisbon-dusk.jpg" alt="Praça do Comércio, Lisbon, at dusk" fetchpriority="high" style="object-position:50% 62%">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-eyebrow"><span class="hero-eyebrow-line"></span><span class="hero-eyebrow-text">Web Summit 2026 · Lisbon · Nov 9-13</span></div>
     <h1 class="hero-title">Yorkseed<em>Lisbon</em>House</h1>
     <p class="hero-tagline">The room between the sessions.</p>
-    <div class="hero-location"><span class="hero-location-dot"></span>Teja House · Lisbon, Portugal · Steps from Web Summit</div>
+    <div class="hero-location"><span class="hero-location-dot"></span>Teja House · Lisbon, Portugal · Close to the water</div>
     <div class="hero-meta">
       <div class="hm"><span class="hm-l">Dates</span><span class="hm-v">November 9-13, 2026</span></div>
       <div class="hm"><span class="hm-l">Hours</span><span class="hm-v">Morning Wellness through Evening Panels</span></div>
@@ -343,7 +341,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
     <div class="venue-sub">Lisbon, Portugal · Web Summit Week</div>
     <div class="venue-details">
       <div class="vd"><span class="vd-l">Venue</span><span class="vd-v">Teja House, Lisbon</span></div>
-      <div class="vd"><span class="vd-l">Dates</span><span class="vd-v">Sunday-Thursday · Nov 9-13, 2026</span></div>
+      <div class="vd"><span class="vd-l">Dates</span><span class="vd-v">Monday-Friday · Nov 9-13, 2026</span></div>
       <div class="vd"><span class="vd-l">Program</span><span class="vd-v">Morning wellness through evening panels</span></div>
       <div class="vd"><span class="vd-l">F&B</span><span class="vd-v">Discount at the on-site restaurant and bar all week</span></div>
       <div class="vd"><span class="vd-l">Access</span><span class="vd-v">Ticket-based · Web Summit ticket not included</span></div>
@@ -361,35 +359,25 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 
     <div class="day-block">
       <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Sunday</div><div class="day-date">Nov 9</div></div>
-        <div><div class="day-headline">Founders' Welcome Reception</div><div class="day-sub">Evening · Teja House</div></div>
+        <div><div class="day-name">Monday</div><div class="day-date">Nov 9</div></div>
+        <div><div class="day-headline">Executive Lunch · Opening Night</div><div class="day-sub">Midday and Evening</div></div>
         <div class="day-chevron">▼</div>
       </div>
       <div class="day-body open">
         <div class="event-row">
-          <div class="ev-time">Evening</div>
-          <div>
-            <div class="ev-name">Founders' Welcome Reception</div>
-            <div class="ev-desc">The House opens. An intimate evening to meet your fellow founders and the Yorkseed team before the week begins. Drinks, introductions, and the start of something.</div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="day-block">
-      <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Monday</div><div class="day-date">Nov 10</div></div>
-        <div><div class="day-headline">Executive Lunch · Yorkseed Passport Series</div><div class="day-sub">Midday · Teja House</div></div>
-        <div class="day-chevron">▼</div>
-      </div>
-      <div class="day-body">
-        <div class="event-row">
-          <div class="ev-time">Midday</div>
+          <div class="ev-time">12:00 PM</div>
           <div>
             <div class="ev-name">Executive Lunch</div>
             <div class="ev-desc">Yorkseed Passport Series. Curated lunch for founders and senior executives. No panels, no presentations. Conversation, connection, and the table set with the right people.</div>
-            
+            <a href="https://luma.com/ryyphlgu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
+          </div>
+        </div>
+        <div class="event-row">
+          <div class="ev-time">8:00 PM</div>
+          <div>
+            <div class="ev-name">The Yorkseed Soirée – Web Summit Opening Night 2026</div>
+            <div class="ev-desc">The House opens the week. Yorkseed's opening-night party for founders, investors and partners: drinks, introductions, and the start of something.</div>
+            <a href="https://luma.com/44qkfxdu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
           </div>
         </div>
       </div>
@@ -397,17 +385,17 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 
     <div class="day-block">
       <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Tuesday</div><div class="day-date">Nov 11</div></div>
+        <div><div class="day-name">Tuesday</div><div class="day-date">Nov 10</div></div>
         <div><div class="day-headline">Capital Lunch · Strategy Roundtable</div><div class="day-sub">Midday and Afternoon</div></div>
         <div class="day-chevron">▼</div>
       </div>
       <div class="day-body">
         <div class="event-row">
-          <div class="ev-time">Midday</div>
+          <div class="ev-time">12:00 PM</div>
           <div>
             <div class="ev-name">Capital Lunch</div>
             <div class="ev-desc">Yorkseed Passport Series. Founders and investors around the same table. Curated introductions and capital conversations that go deeper than a conference hall.</div>
-            
+            <a href="https://luma.com/lj25z4k3" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
           </div>
         </div>
         <div class="event-row">
@@ -415,7 +403,6 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
           <div>
             <div class="ev-name">Strategy Roundtable</div>
             <div class="ev-desc">Small group. Real questions. Practical conversation for founders navigating growth, fundraising, and the decisions that define the next stage.</div>
-            
           </div>
         </div>
       </div>
@@ -423,8 +410,8 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 
     <div class="day-block">
       <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Wednesday</div><div class="day-date">Nov 12</div></div>
-        <div><div class="day-headline">Founder Showcase · Closing Reception</div><div class="day-sub">Afternoon and Evening</div></div>
+        <div><div class="day-name">Wednesday</div><div class="day-date">Nov 11</div></div>
+        <div><div class="day-headline">Founder Showcase</div><div class="day-sub">Afternoon</div></div>
         <div class="day-chevron">▼</div>
       </div>
       <div class="day-body">
@@ -433,16 +420,25 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
           <div>
             <div class="ev-name">Founder Showcase</div>
             <div class="ev-desc">Delegation founders present to the Yorkseed network. Live from Teja House, shared across the community. Built for signal, not spectacle.</div>
-            
             <a href="#delegation" class="ev-link">Join Delegation →</a>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-header featured" onclick="toggleDay(this)">
+        <div><div class="day-name">Thursday</div><div class="day-date">Nov 12</div></div>
+        <div><div class="day-headline">Closing Reception</div><div class="day-sub">Evening</div></div>
+        <div class="day-chevron">▼</div>
+      </div>
+      <div class="day-body">
         <div class="event-row">
-          <div class="ev-time">Evening</div>
+          <div class="ev-time">7:00 PM</div>
           <div>
-            <div class="ev-name">Closing Reception</div>
+            <div class="ev-name">Closing Reception · Yorkseed Grand Finale</div>
             <div class="ev-desc">The House closes out the week. Final drinks, final introductions, and the connections that carry forward long after Web Summit ends.</div>
-            
+            <a href="https://luma.com/i7llsb2c" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
           </div>
         </div>
       </div>
@@ -450,7 +446,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
 
     <div class="day-block">
       <div class="day-header" onclick="toggleDay(this)">
-        <div><div class="day-name">Thursday</div><div class="day-date">Nov 13</div></div>
+        <div><div class="day-name">Friday</div><div class="day-date">Nov 13</div></div>
         <div><div class="day-headline">Post-Summit Founders' Lunch</div><div class="day-sub">Details coming soon</div></div>
         <div class="day-chevron">▼</div>
       </div>
