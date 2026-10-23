@@ -240,6 +240,23 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
   .ft-brand{grid-column:1/-1;}
   .fb2{flex-direction:column;gap:4px;}
 }
+
+/* HERO: desktop layout (title on one line, CTAs beside the tagline, details as a 3-column strip) */
+@media(min-width:1025px){
+  .hero-content{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:64px;align-items:end;max-width:1440px;margin:0 auto;padding:150px 56px 56px;}
+  .hero-eyebrow{grid-column:1/-1;grid-row:1;}
+  .hero-title{grid-column:1/-1;grid-row:2;font-size:clamp(4.4rem,7vw,7.4rem);line-height:.92;letter-spacing:-.01em;margin-bottom:22px;}
+  .hero-title em{display:inline;padding:0 .16em 0 .12em;}
+  .hero-tagline{grid-column:1;grid-row:3;font-size:clamp(1.45rem,2vw,1.85rem);margin-bottom:12px;}
+  .hero-location{grid-column:1;grid-row:4;margin-bottom:0;font-size:.8rem;}
+  .hero-ctas{grid-column:2;grid-row:3/5;flex-direction:row;width:auto;gap:12px;align-self:end;}
+  .hero-ctas .btn{padding:17px 34px;white-space:nowrap;}
+  .hero-meta{grid-column:1/-1;grid-row:5;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:44px 0 0;border-top:1px solid rgba(201,169,110,0.4);}
+  .hm{padding:20px 28px 0 0;margin-right:28px;border-bottom:none;border-right:1px solid rgba(255,255,255,0.1);gap:6px;}
+  .hm:last-child{border-right:none;margin-right:0;padding-right:0;}
+  .hm-l{color:var(--gold);}
+  .hm-v{font-size:.98rem;line-height:1.4;}
+}
 </style>
 </head>
 <body>
@@ -291,7 +308,6 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
       <div class="hm"><span class="hm-l">Dates</span><span class="hm-v">November 9-13, 2026</span></div>
       <div class="hm"><span class="hm-l">Hours</span><span class="hm-v">Morning Wellness through Evening Panels</span></div>
       <div class="hm"><span class="hm-l">Access</span><span class="hm-v">Ticket-Based · Advance Registration</span></div>
-      <div class="hm"><span class="hm-l">Hosted at</span><span class="hm-v">Teja House · Lisbon</span></div>
     </div>
     <div class="hero-ctas">
       <a class="btn btn-gold" href="#tickets">Get Your Ticket</a>
