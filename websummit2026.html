@@ -135,6 +135,11 @@ nav.scrolled{padding:14px 56px;background:rgba(0,27,68,0.97);backdrop-filter:blu
 .ev-badge{display:none;}
 .ev-where{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 8px;}
 .ev-where.home{color:var(--gold-l);}
+.ev-code{display:inline-block;margin-top:12px;padding:8px 12px;border:1px dashed rgba(201,169,110,.55);background:rgba(201,169,110,.08);font-size:.74rem;color:rgba(255,255,255,.82);line-height:1.5;}
+.ev-code strong{color:var(--gold-l);font-weight:700;letter-spacing:.08em;}
+.ev-code + .ev-link{display:block;}
+.ev-code{max-width:100%;box-sizing:border-box;}
+@media(max-width:767px){.ev-code{padding:8px 10px;}.ev-code strong{display:block;font-size:.66rem;letter-spacing:0;white-space:nowrap;margin:2px 0;}}
 .valois-event{margin:16px 0 4px;padding:30px 28px;background:#1E1B12;border-left:3px solid #D4BC82;}
 .valois-event-grid{display:grid;grid-template-columns:96px 1fr;gap:24px;}
 .valois-time{font-size:.65rem;font-weight:700;letter-spacing:.1em;color:#D4BC82;line-height:1.5;padding-top:3px;}
@@ -421,6 +426,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
             <div class="ev-name">The Yorkseed Soirée – Web Summit Opening Night 2026</div>
             <div class="ev-where home">At Teja House · Week kickoff</div>
             <div class="ev-desc">The week kicks off at Teja House. Yorkseed's opening-night party for founders, investors and partners: drinks, introductions, and the start of something.</div>
+            <div class="ev-code">Yorkseed House guests: use code <strong>YORKSEEDHOUSEGUEST</strong> for 15% off</div>
             <a href="https://luma.com/44qkfxdu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
           </div>
         </div>
