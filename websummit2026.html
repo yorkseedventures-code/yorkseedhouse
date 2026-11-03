@@ -114,25 +114,24 @@ nav.scrolled{padding:14px 56px;background:rgba(0,27,68,0.97);backdrop-filter:blu
 .program-h{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,2.6vw,2.8rem);font-weight:300;color:var(--ivory);line-height:1.0;margin-bottom:12px;}
 .program-h em{font-style:italic;}
 .program-note{font-size:.87rem;color:rgba(255,255,255,.62);line-height:1.6;max-width:560px;margin:0 0 36px;font-weight:400;}
-.day-block{border-bottom:1px solid var(--rule);}
-.day-header{display:grid;grid-template-columns:120px 1fr auto;align-items:start;gap:24px;padding:24px 0;cursor:pointer;transition:background .2s;}
-.day-header:hover{background:rgba(255,255,255,.02);}
-.day-name{font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);}
-.day-date{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;color:var(--ivory);line-height:1;}
-.day-sub{font-size:.72rem;color:rgba(255,255,255,.6);}
-.day-headline{font-size:.88rem;font-weight:500;color:var(--ivory);padding-top:4px;}
-.day-header.featured .day-name{color:var(--gold-l);}
-.day-chevron{font-size:.65rem;color:rgba(255,255,255,.5);align-self:center;transition:transform .25s;}
-.day-body{display:none;padding:0 0 24px 144px;}
-.day-body.open{display:block;}
-.event-row{display:grid;grid-template-columns:96px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.05);}
-.event-row:last-child{border-bottom:none;}
-.ev-time{font-size:.65rem;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.45);line-height:1.5;padding-top:3px;text-transform:uppercase;}
-.ev-name{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:400;color:var(--ivory);margin-bottom:6px;}
-.ev-desc{font-size:.86rem;line-height:1.75;color:rgba(255,255,255,.68);margin-bottom:0;font-weight:400;}
+.program-days{display:flex;flex-direction:column;}
+.day{display:grid;grid-template-columns:120px 1fr;gap:28px;padding:44px 0;border-bottom:1px solid var(--rule);}
+.day:last-child{border-bottom:none;}
+.day-rail{position:sticky;top:88px;align-self:start;}
+.day-name{font-size:.55rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.day-num{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;color:var(--ivory);line-height:.85;}
+.day-mo{font-size:.6rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:6px;}
+.day-theme{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.6;max-width:110px;}
+
+.day-events{position:relative;border-left:1px solid var(--rule);}
+.tl-event{position:relative;padding:0 0 36px 30px;margin-left:-1px;}
+.tl-event:last-child{padding-bottom:0;}
+.tl-event::before{content:'';position:absolute;left:-5px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--ocean2);border:1.5px solid var(--gold);}
+.ev-time{font-size:.65rem;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:8px;}
+.ev-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:400;color:var(--ivory);margin-bottom:6px;}
+.ev-desc{font-size:.86rem;line-height:1.75;color:rgba(255,255,255,.68);margin-bottom:0;font-weight:400;max-width:480px;}
 .ev-link{display:inline-block;font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);text-decoration:none;opacity:.65;margin-top:12px;transition:opacity .2s;}
 .ev-link:hover{opacity:1;}
-.ev-badge{display:none;}
 .ev-where{font-size:.58rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 8px;}
 .ev-where.home{color:var(--gold-l);}
 .ev-code{display:inline-block;margin-top:12px;padding:8px 12px;border:1px dashed rgba(201,169,110,.55);background:rgba(201,169,110,.08);font-size:.74rem;color:rgba(255,255,255,.82);line-height:1.5;}
@@ -140,7 +139,9 @@ nav.scrolled{padding:14px 56px;background:rgba(0,27,68,0.97);backdrop-filter:blu
 .ev-code + .ev-link{display:block;}
 .ev-code{max-width:100%;box-sizing:border-box;}
 @media(max-width:767px){.ev-code{padding:8px 10px;}.ev-code strong{display:block;font-size:.66rem;letter-spacing:0;white-space:nowrap;margin:2px 0;}}
-.valois-event{margin:16px 0 4px;padding:30px 28px;background:#1E1B12;border-left:3px solid #D4BC82;}
+.tl-event.valois-wrap{padding-left:0;margin-left:22px;}
+.tl-event.valois-wrap::before{left:-28px;top:16px;width:10px;height:10px;background:#D4BC82;border-color:#D4BC82;}
+.valois-event{padding:30px 28px;background:#1E1B12;border-left:3px solid #D4BC82;}
 .valois-event-grid{display:grid;grid-template-columns:96px 1fr;gap:24px;}
 .valois-time{font-size:.65rem;font-weight:700;letter-spacing:.1em;color:#D4BC82;line-height:1.5;padding-top:3px;}
 .valois-eyebrow{font-size:.58rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#D4BC82;margin-bottom:12px;}
@@ -156,7 +157,7 @@ nav.scrolled{padding:14px 56px;background:rgba(0,27,68,0.97);backdrop-filter:blu
 .valois-btn:hover{background:#E2CD97;}
 .valois-pill{display:inline-block;padding:5px 14px;font-size:.56rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#D4BC82;border:1px solid rgba(212,188,130,.3);}
 .valois-site{font-size:.66rem;font-weight:600;color:#D4BC82;text-decoration:none;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid rgba(212,188,130,.4);padding-bottom:1px;}
-@media(max-width:767px){.valois-event{margin:14px 0 4px -94px;padding:22px 18px;}.valois-event-grid{grid-template-columns:1fr;gap:10px;}}
+@media(max-width:767px){.valois-event{padding:22px 18px;}.valois-event-grid{grid-template-columns:1fr;gap:10px;}.tl-event.valois-wrap{margin-left:14px;}.tl-event.valois-wrap::before{left:-20px;}}
 
 
 /* DELEGATION */
@@ -257,8 +258,10 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
   .venue-photo-overlay{background:linear-gradient(to bottom,transparent 60%,var(--ocean) 100%);}
   .venue-text{padding:48px 20px;}
   .program-inner{padding:40px 20px;}
-  .day-header{grid-template-columns:80px 1fr auto;gap:14px;}
-  .day-body{padding:0 0 20px 94px;}
+  .day{grid-template-columns:1fr;gap:14px;padding:36px 0;}
+  .day-rail{position:static;display:flex;align-items:baseline;gap:10px;}
+  .day-num{font-size:1.9rem;}
+  .day-theme{display:none;}
   .event-row{grid-template-columns:72px 1fr;gap:14px;}
   .throughout{padding:64px 20px;}
   .tt-grid{grid-template-columns:1fr 1fr;}
@@ -404,166 +407,161 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
   <div class="program-inner">
     <span class="eyebrow">Nov 9-13, 2026</span>
     <h2 class="program-h">Five days of <em>curated programming</em></h2>
-    <p class="program-note">Your House ticket covers the full week. RSVP to individual sessions after purchase.</p>
+    <p class="program-note">Your House ticket covers the full week. RSVP to individual sessions below, anytime, whether or not you've purchased.</p>
 
-    <div class="day-block">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div><div class="day-name">Sunday</div><div class="day-date">Nov 8</div></div>
-        <div><div class="day-headline">Web Summit Pre-Game</div><div class="day-sub">Evening</div></div>
-        <div class="day-chevron">▼</div>
+    <div class="program-days">
+
+    <div class="day">
+      <div class="day-rail">
+        <div class="day-name">Sunday</div>
+        <div class="day-num">08</div>
+        <div class="day-mo">November</div>
+        <div class="day-theme">Pre-game</div>
       </div>
-      <div class="day-body">
-        <div class="event-row">
+      <div class="day-events">
+        <div class="tl-event">
           <div class="ev-time">8:00 PM</div>
-          <div>
-            <div class="ev-name">Web Summit Pre-Game</div>
-            <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
-            <div class="ev-desc">Yorkseed Passport Series. An intimate evening for a select group of founders and investors to meet and connect before Web Summit week begins. Approval required for founders and investors; general admission is first come, first served.</div>
-            <a href="https://luma.com/websummitlisbonpregame" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
-          </div>
+          <div class="ev-name">Web Summit Pre-Game</div>
+          <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
+          <div class="ev-desc">Yorkseed Passport Series. An intimate evening for a select group of founders and investors to meet and connect before Web Summit week begins. Approval required for founders and investors; general admission is first come, first served.</div>
+          <a href="https://luma.com/websummitlisbonpregame" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="day-block">
-      <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Monday</div><div class="day-date">Nov 9</div></div>
-        <div><div class="day-headline">Executive Lunch · Opening Night</div><div class="day-sub">Midday and Evening</div></div>
-        <div class="day-chevron">▼</div>
+    <div class="day">
+      <div class="day-rail">
+        <div class="day-name">Monday</div>
+        <div class="day-num">09</div>
+        <div class="day-mo">November</div>
+        <div class="day-theme">Lunch + opening party</div>
       </div>
-      <div class="day-body open">
-        <div class="event-row">
-          <div class="ev-time">12:00 PM<br>2:30 PM</div>
-          <div>
-            <div class="ev-name">Executive Lunch</div>
-            <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
-            <div class="ev-desc">Yorkseed Passport Series. Curated lunch for founders and senior executives. No panels, no presentations. Conversation, connection, and the table set with the right people.</div>
-            <a href="https://luma.com/ryyphlgu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
-          </div>
+      <div class="day-events">
+        <div class="tl-event">
+          <div class="ev-time">12:00 – 2:30 PM</div>
+          <div class="ev-name">Executive Lunch</div>
+          <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
+          <div class="ev-desc">Yorkseed Passport Series. Curated lunch for founders and senior executives. No panels, no presentations. Conversation, connection, and the table set with the right people.</div>
+          <a href="https://luma.com/ryyphlgu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
         </div>
-        <div class="event-row">
+        <div class="tl-event">
           <div class="ev-time">8:00 PM</div>
-          <div>
-            <div class="ev-name">The Yorkseed Soirée – Web Summit Opening Night 2026</div>
-            <div class="ev-where home">At Teja House · Week kickoff</div>
-            <div class="ev-desc">The week kicks off at Teja House. Yorkseed's opening-night party for founders, investors and partners: drinks, introductions, and the start of something.</div>
-            <div class="ev-code">Yorkseed House guests: use code <strong>YORKSEEDHOUSEGUEST</strong> for 15% off</div>
-            <a href="https://luma.com/44qkfxdu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
-          </div>
+          <div class="ev-name">The Yorkseed Soirée – Web Summit Opening Night 2026</div>
+          <div class="ev-where home">At Teja House · Week kickoff</div>
+          <div class="ev-desc">The week kicks off at Teja House. Yorkseed's opening-night party for founders, investors and partners: drinks, introductions, and the start of something.</div>
+          <div class="ev-code">Yorkseed House guests: use code <strong>YORKSEEDHOUSEGUEST</strong> for 15% off</div>
+          <a href="https://luma.com/44qkfxdu" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="day-block">
-      <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Tuesday</div><div class="day-date">Nov 10</div></div>
-        <div><div class="day-headline">Capital Lunch</div><div class="day-sub">Midday</div></div>
-        <div class="day-chevron">▼</div>
+    <div class="day">
+      <div class="day-rail">
+        <div class="day-name">Tuesday</div>
+        <div class="day-num">10</div>
+        <div class="day-mo">November</div>
+        <div class="day-theme">Lunch</div>
       </div>
-      <div class="day-body">
-        <div class="event-row">
-          <div class="ev-time">12:00 PM<br>2:30 PM</div>
-          <div>
-            <div class="ev-name">Capital Lunch</div>
-            <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
-            <div class="ev-desc">Yorkseed Passport Series. Founders and investors around the same table. Curated introductions and capital conversations that go deeper than a conference hall.</div>
-            <a href="https://luma.com/lj25z4k3" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
-          </div>
+      <div class="day-events">
+        <div class="tl-event">
+          <div class="ev-time">12:00 – 2:30 PM</div>
+          <div class="ev-name">Capital Lunch</div>
+          <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
+          <div class="ev-desc">Yorkseed Passport Series. Founders and investors around the same table. Curated introductions and capital conversations that go deeper than a conference hall.</div>
+          <a href="https://luma.com/lj25z4k3" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="day-block">
-      <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Wednesday</div><div class="day-date">Nov 11</div></div>
-        <div><div class="day-headline">Allocator Lunch · Valois</div><div class="day-sub">Midday and Evening</div></div>
-        <div class="day-chevron">▼</div>
+    <div class="day">
+      <div class="day-rail">
+        <div class="day-name">Wednesday</div>
+        <div class="day-num">11</div>
+        <div class="day-mo">November</div>
+        <div class="day-theme">Lunch + Valois + makers night</div>
       </div>
-      <div class="day-body">
-        <div class="event-row">
-          <div class="ev-time">12:30 PM<br>2:30 PM</div>
-          <div>
-            <div class="ev-name">Allocator Lunch</div>
-            <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
-            <div class="ev-desc">Yorkseed Passport Series. A seated lunch for founders, investors, fund managers, family offices and corporate leaders. Structured introductions and relationship-first conversation, with no stage or panels.</div>
-            <a href="https://luma.com/jmjk0qqh" class="ev-link" target="_blank" rel="noopener">Apply →</a>
-          </div>
+      <div class="day-events">
+        <div class="tl-event">
+          <div class="ev-time">12:30 – 2:30 PM</div>
+          <div class="ev-name">Allocator Lunch</div>
+          <div class="ev-where">Off-site · Lisbon · Address shared after approval</div>
+          <div class="ev-desc">Yorkseed Passport Series. A seated lunch for founders, investors, fund managers, family offices and corporate leaders. Structured introductions and relationship-first conversation, with no stage or panels.</div>
+          <a href="https://luma.com/jmjk0qqh" class="ev-link" target="_blank" rel="noopener">Apply →</a>
         </div>
-        <div class="valois-event">
-          <div class="valois-event-grid">
-            <div class="valois-time">5:00 PM<br>8:00 PM</div>
-            <div>
-              <div class="valois-eyebrow">Valois by Yorkseed · Private Circle</div>
-              <div class="valois-title">Valois <em>in Lisbon</em></div>
-              <div class="valois-sub">The Allocator Table · Off-site · A private venue in Lisbon, shared with approved guests</div>
-              <p class="valois-desc">A private evening during Web Summit week for about 45 selected family offices, LPs, GPs, institutional investors and private investors. Conversation-first, with no stage or panels.</p>
-              <div class="valois-list">
-                <div><span>·</span>Family Offices · Limited Partners · General Partners</div>
-                <div><span>·</span>Institutional Investors · Private Investors</div>
-              </div>
-              <div class="valois-actions">
-                <a href="https://luma.com/k0zamjmi" target="_blank" rel="noopener" class="valois-btn">Request to Join →</a>
-                <span class="valois-pill">By Invitation or Approval Only</span>
-                <a href="https://thevalois.com" target="_blank" rel="noopener" class="valois-site">thevalois.com →</a>
+        <div class="tl-event valois-wrap">
+          <div class="valois-event">
+            <div class="valois-event-grid">
+              <div class="valois-time">5:00 PM<br>8:00 PM</div>
+              <div>
+                <div class="valois-eyebrow">Valois by Yorkseed · Private Circle</div>
+                <div class="valois-title">Valois <em>in Lisbon</em></div>
+                <div class="valois-sub">The Allocator Table · Off-site · A private venue in Lisbon, shared with approved guests</div>
+                <p class="valois-desc">A private evening during Web Summit week for about 45 selected family offices, LPs, GPs, institutional investors and private investors. Conversation-first, with no stage or panels.</p>
+                <div class="valois-list">
+                  <div><span>·</span>Family Offices · Limited Partners · General Partners</div>
+                  <div><span>·</span>Institutional Investors · Private Investors</div>
+                </div>
+                <div class="valois-actions">
+                  <a href="https://luma.com/k0zamjmi" target="_blank" rel="noopener" class="valois-btn">Request to Join →</a>
+                  <span class="valois-pill">By Invitation or Approval Only</span>
+                  <a href="https://thevalois.com" target="_blank" rel="noopener" class="valois-site">thevalois.com →</a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="event-row">
-          <div class="ev-time">6:00 PM<br>8:30 PM</div>
-          <div>
-            <div class="ev-name">Show What You Build</div>
-            <div class="ev-where">Primal Moves Lisbon · Santos · Free, first come first served</div>
-            <div class="ev-desc">Co-hosted with Yorkseed Global Venture Network. A casual meetup for makers, founders and artists to show what they're building: three presenters on stage with Q&A, everyone else gets a 30-second intro, then drinks and informal networking. No pitch decks, no investor hunting.</div>
-            <a href="https://luma.com/rnm96bu0" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
-          </div>
+        <div class="tl-event">
+          <div class="ev-time">6:00 – 8:30 PM</div>
+          <div class="ev-name">Show What You Build</div>
+          <div class="ev-where">Primal Moves Lisbon · Santos · Free, first come first served</div>
+          <div class="ev-desc">A casual meetup for makers, founders and artists to show what they're building: three presenters on stage with Q&A, everyone else gets a 30-second intro, then drinks and informal networking. No pitch decks, no investor hunting.</div>
+          <a href="https://luma.com/rnm96bu0" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="day-block">
-      <div class="day-header featured" onclick="toggleDay(this)">
-        <div><div class="day-name">Thursday</div><div class="day-date">Nov 12</div></div>
-        <div><div class="day-headline">Founder Showcase · Closing Reception</div><div class="day-sub">Time TBD and Evening</div></div>
-        <div class="day-chevron">▼</div>
+    <div class="day">
+      <div class="day-rail">
+        <div class="day-name">Thursday</div>
+        <div class="day-num">12</div>
+        <div class="day-mo">November</div>
+        <div class="day-theme">Showcase + closing party</div>
       </div>
-      <div class="day-body">
-        <div class="event-row">
-          <div class="ev-time">TBD</div>
-          <div>
-            <div class="ev-name">Founder Showcase</div>
-            <div class="ev-desc">Delegation founders present to the Yorkseed network. Live from Teja House, shared across the community. Built for signal, not spectacle.</div>
-            <a href="#delegation" class="ev-link">Join Delegation →</a>
-          </div>
+      <div class="day-events">
+        <div class="tl-event">
+          <div class="ev-time">Time TBD</div>
+          <div class="ev-name">Founder Showcase</div>
+          <div class="ev-where home">At Teja House · Shared across the network</div>
+          <div class="ev-desc">Delegation founders present to the Yorkseed network. Live from Teja House, shared across the community. Built for signal, not spectacle.</div>
+          <a href="#delegation" class="ev-link">Join Delegation →</a>
         </div>
-        <div class="event-row">
+        <div class="tl-event">
           <div class="ev-time">7:00 PM</div>
-          <div>
-            <div class="ev-name">Closing Reception · Yorkseed Grand Finale</div>
-            <div class="ev-desc">The House closes out the week. Final drinks, final introductions, and the connections that carry forward long after Web Summit ends.</div>
-            <a href="https://luma.com/i7llsb2c" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
-          </div>
+          <div class="ev-name">Closing Reception · Yorkseed Grand Finale</div>
+          <div class="ev-where home">At Teja House</div>
+          <div class="ev-desc">The House closes out the week. Final drinks, final introductions, and the connections that carry forward long after Web Summit ends.</div>
+          <a href="https://luma.com/i7llsb2c" class="ev-link" target="_blank" rel="noopener">RSVP →</a>
         </div>
       </div>
     </div>
 
-    <div class="day-block">
-      <div class="day-header" onclick="toggleDay(this)">
-        <div><div class="day-name">Friday</div><div class="day-date">Nov 13</div></div>
-        <div><div class="day-headline">Post-Summit Founders' Lunch</div><div class="day-sub">Details coming soon</div></div>
-        <div class="day-chevron">▼</div>
+    <div class="day">
+      <div class="day-rail">
+        <div class="day-name">Friday</div>
+        <div class="day-num">13</div>
+        <div class="day-mo">November</div>
+        <div class="day-theme">Details coming soon</div>
       </div>
-      <div class="day-body">
-        <div class="event-row">
-          <div class="ev-time">TBD</div>
-          <div>
-            <div class="ev-name">Post-Summit Founders' Lunch</div>
-            <div class="ev-desc">The last meal of the week. Small, intimate, unscheduled. Details confirmed closer to the date.</div>
-          </div>
+      <div class="day-events">
+        <div class="tl-event">
+          <div class="ev-time">Time TBD</div>
+          <div class="ev-name">Post-Summit Founders' Lunch</div>
+          <div class="ev-desc">The last meal of the week. Small, intimate, unscheduled. Details confirmed closer to the date.</div>
         </div>
       </div>
     </div>
 
+    </div>
   </div>
 </section>
 
@@ -672,13 +670,6 @@ window.addEventListener('scroll',function(){
   var nav=document.getElementById('mainNav');
   if(nav) nav.classList.toggle('scrolled',window.scrollY>60);
 });
-function toggleDay(header) {
-  const body = header.nextElementSibling;
-  const chevron = header.querySelector('.day-chevron');
-  const isOpen = body.classList.contains('open');
-  body.classList.toggle('open', !isOpen);
-  if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
-}
 </script>
 </body>
 </html>
