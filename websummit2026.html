@@ -201,6 +201,18 @@ nav.scrolled{padding:14px 56px;background:rgba(0,27,68,0.97);backdrop-filter:blu
 .evd .ev{display:block;padding:0;border:0;margin:0;}
 .evd .ev-c{margin-top:14px;}
 .evd .ev-valois{padding:18px;}
+/* COMMUNITY PARTNER EVENTS */
+.partner-events{margin-top:44px;padding-top:32px;border-top:1px solid rgba(0,27,68,.14);}
+.pe-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#7D5F28;margin-bottom:10px;display:block;}
+.pe-note{font-size:.88rem;color:rgba(0,27,68,.66);line-height:1.6;max-width:560px;margin:0 0 22px;}
+.pe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;}
+.pe-card{display:block;padding:20px 22px;background:var(--parchment);text-decoration:none;color:var(--ocean);transition:background .2s;}
+.pe-card:hover{background:#E7E0D1;}
+.pe-badge{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7D5F28;border:1px solid rgba(125,95,40,.35);padding:3px 9px;margin-bottom:12px;}
+.pe-time{font-size:.74rem;font-weight:700;letter-spacing:.04em;color:rgba(0,27,68,.6);text-transform:uppercase;margin-bottom:6px;}
+.pe-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:500;color:var(--ocean);line-height:1.25;margin-bottom:6px;}
+.pe-where{font-size:.82rem;color:rgba(0,27,68,.66);margin-bottom:10px;}
+.pe-go{font-size:.74rem;font-weight:700;letter-spacing:.06em;color:#7D5F28;}
 @media(min-width:768px){.program.is-cal .pdays{display:none;}}
 @media(max-width:900px){.ev{grid-template-columns:110px minmax(0,1fr);}.ev-c{grid-column:2;flex-direction:row;flex-wrap:wrap;margin-top:8px;}.ev-go,.ev-s{flex:1 1 130px;}}
 @media(max-width:767px){
@@ -613,6 +625,20 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:52px 56px 28px
       </section>
     </div>
     <div class="cal" id="progCal" hidden></div>
+
+    <div class="partner-events">
+      <span class="pe-eyebrow">Community Partner Events</span>
+      <p class="pe-note">Independent events from Yorkseed's partners during Web Summit week — not run by Yorkseed House. RSVP directly with the host.</p>
+      <div class="pe-grid">
+        <a href="https://luma.com/ksw5fd00" target="_blank" rel="noopener" class="pe-card">
+          <span class="pe-badge">Community Partner</span>
+          <div class="pe-time">Mon, Nov 9 · 7:00–9:00 PM GMT</div>
+          <div class="pe-name">AI in the Palace</div>
+          <div class="pe-where">PTW Palace · Rua Gomes Freire, 98, Lisbon · Free</div>
+          <span class="pe-go">RSVP on Luma →</span>
+        </a>
+      </div>
+    </div>
   </div>
   <dialog class="evd" id="evDialog" aria-label="Event details"><button type="button" class="evd-x" aria-label="Close">×</button><div id="evDialogBody"></div></dialog>
 </section>
